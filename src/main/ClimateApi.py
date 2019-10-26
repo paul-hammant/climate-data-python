@@ -5,6 +5,7 @@ import xml.etree.ElementTree as ET
 class ClimateApi:
 
     DEFAULT_CLIMATE_API_SITE = "http://climatedataapi.worldbank.org"
+    LOCAL_HOST = "http://localhost:8099"
 
     def __init__(self, site):
         self.site = site
@@ -13,7 +14,8 @@ class ClimateApi:
         url = self.site + f"/climateweb/rest/v1/country/annualavg/pr/{fromCCYY}/{toCCYY}/{countryISO}.xml"
 
         try:
-            request_text = requests.get(url).text
+            request = requests.get(url)
+            request_text = request.text
             if "Invalid country code. Three letters are required" in request_text:
                 raise AttributeError(f"{countryISO} not recognized by climateweb")
             root = ET.fromstring(request_text)
