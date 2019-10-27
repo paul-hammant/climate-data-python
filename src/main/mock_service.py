@@ -59,8 +59,7 @@ class SimpleMarkdownParser:
 
         return out
 
-    def get_recordings(self) -> [MockRecording]:
-        mocks_path = os.path.dirname(os.path.realpath(__file__)).replace('main', 'mocks')
+    def get_recordings(self, mocks_path) -> [MockRecording]:
         markdown_raw_strings = self.__get_markdown_file_strings(mocks_path)
         return [self.__parse_markdown_string(string) for string in markdown_raw_strings]
 
@@ -90,8 +89,7 @@ class SimpleMarkdownParser:
 
 
 parser = SimpleMarkdownParser()
-mock_recordings = parser.get_recordings()
-
+mock_recordings = parser.get_recordings(os.path.dirname(os.path.realpath(__file__)).replace('main', 'mocks'))
 
 def is_valid_path(path) -> bool:
     return bool(len(list(filter(lambda mock: mock.path == path, mock_recordings))))
