@@ -2,7 +2,8 @@ import pytest
 
 from src.main.ClimateApi import ClimateApi
 
-class TestClass:
+
+class ClimateApiTests:
     site = ClimateApi.DEFAULT_CLIMATE_API_SITE
 
     @pytest.fixture(autouse=True)

@@ -3,10 +3,9 @@ import threading
 
 import pytest
 import src.main.mock_service as MockService
-from src.test.ClimateApiTests import TestClass
+from src.test.ClimateApiTests import ClimateApiTests
 
-
-class TestPlayback(TestClass):
+class PlaybackClimateApiTests(ClimateApiTests):
 
     site = "http://localhost:8099"
     thread1 = threading.Thread(target=MockService.start, daemon=True)
