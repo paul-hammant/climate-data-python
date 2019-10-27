@@ -1,21 +1,7 @@
 import os
+import threading
 from http import HTTPStatus
 from http.server import HTTPServer, BaseHTTPRequestHandler
-
-
-def is_valid_path(path) -> bool:
-    return bool(len(list(filter(lambda mock: mock.path == path, mock_recordings))))
-
-
-def get_dict_from_headers_string(headers_string) -> {}:
-    out = {}
-    lines = headers_string.split('\n')
-
-    for line in lines:
-        line_split = [l.strip().replace('\n', '') for l in line.split(':')]
-        out[line_split[0]] = line_split[1]
-    return out
-
 
 class HttpHandler(BaseHTTPRequestHandler):
 
@@ -24,9 +10,6 @@ class HttpHandler(BaseHTTPRequestHandler):
 
             recording = list(filter(lambda mock : mock.path == self.path, mock_recordings))[0]
             request_headers = get_dict_from_headers_string(str(self.headers).strip())
-
-            print(recording.request_headers)
-            print(request_headers)
 
             if recording.request_headers == request_headers or True:  # Headers currently don't match
                 self.send_response(200)
@@ -49,10 +32,6 @@ class HttpHandler(BaseHTTPRequestHandler):
             HTTPStatus.NOT_FOUND,
             "Unknown file path")
 
-def run(server_class=HTTPServer, handler_class=HttpHandler):
-    server_address = ('localhost', 8099)
-    httpd = server_class(server_address, handler_class)
-    httpd.serve_forever()
 
 class MockRecording:
     def __init__(self, request_path, request_headers: {}, response_headers: {},  request_body='', response_body=''):
@@ -116,14 +95,29 @@ class SimpleMarkdownParser:
         return MockRecording(request_path=request_path, request_headers=request_headers, request_body=request_body,
                              response_headers=response_headers, response_body=response_body)
 
-
 parser = SimpleMarkdownParser()
 mock_recordings = parser.get_recordings()
 
-run()
+def is_valid_path(path) -> bool:
+    return bool(len(list(filter(lambda mock: mock.path == path, mock_recordings))))
+
+def get_dict_from_headers_string(headers_string) -> {}:
+    out = {}
+    lines = headers_string.split('\n')
+
+    for line in lines:
+        line_split = [l.strip().replace('\n', '') for l in line.split(':')]
+        out[line_split[0]] = line_split[1]
+    return out
 
 
+def start():
+    server_address = ('localhost', 8099)
+    httpd = HTTPServer(server_address, HttpHandler)
+    httpd.serve_forever()
 
 
+if __name__ == "__main__":
+    start()
 
 

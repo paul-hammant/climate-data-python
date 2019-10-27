@@ -2,17 +2,12 @@ import pytest
 
 from src.main.ClimateApi import ClimateApi
 
-local_host = True
-
 class TestClass:
-    climateApi = None
+    site = ClimateApi.DEFAULT_CLIMATE_API_SITE
 
     @pytest.fixture(autouse=True)
     def startup(self):
-        if not local_host:
-            self.climateApi = ClimateApi(ClimateApi.DEFAULT_CLIMATE_API_SITE)
-        else:
-            self.climateApi = ClimateApi(ClimateApi.LOCAL_HOST)
+        self.climateApi = ClimateApi(self.site)
 
     def test_averageRainfallForGreatBritainFrom1980to1999Exists(self):
         assert self.climateApi.getAveAnnualRainfall(1980, 1999, "gbr") == 988.8454972331015
