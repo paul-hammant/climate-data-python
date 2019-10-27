@@ -5,6 +5,7 @@ import pytest
 import src.main.mock_service as MockService
 from src.test.ClimateApiTests import ClimateApiTests
 
+
 class PlaybackClimateApiTests(ClimateApiTests):
 
     site = "http://localhost:8099"
