@@ -95,11 +95,14 @@ class SimpleMarkdownParser:
         return MockRecording(request_path=request_path, request_headers=request_headers, request_body=request_body,
                              response_headers=response_headers, response_body=response_body)
 
+
 parser = SimpleMarkdownParser()
 mock_recordings = parser.get_recordings()
 
+
 def is_valid_path(path) -> bool:
     return bool(len(list(filter(lambda mock: mock.path == path, mock_recordings))))
+
 
 def get_dict_from_headers_string(headers_string) -> {}:
     out = {}
