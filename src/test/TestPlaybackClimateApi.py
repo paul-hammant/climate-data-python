@@ -1,3 +1,4 @@
+import inspect
 import os
 import threading
 
@@ -18,5 +19,24 @@ class TestPlaybackClimateApi(TestClimateApi):
         finally:
             os._exit(1)
 
+    def test_averageRainfallForGreatBritainFrom1980to1999Exists(self):
+        MockService.HttpHandler.currentMethodName = inspect.stack()[0][3]
+        super().test_averageRainfallForGreatBritainFrom1980to1999Exists()
+
+    def test_averageRainfallForFranceFrom1980to1999Exists(self):
+        MockService.HttpHandler.currentMethodName = inspect.stack()[0][3]
+        super().test_averageRainfallForFranceFrom1980to1999Exists()
+
+    def test_averageRainfallForEgyptFrom1980to1999Exists(self):
+        MockService.HttpHandler.currentMethodName = inspect.stack()[0][3]
+        super().test_averageRainfallForEgyptFrom1980to1999Exists()
+
+    def test_averageRainfallForGreatBritainFrom1985to1995DoesNotExist(self):
+        MockService.HttpHandler.currentMethodName = inspect.stack()[0][3]
+        super().test_averageRainfallForGreatBritainFrom1985to1995DoesNotExist()
+
+    def test_averageRainfallForMiddleEarthFrom1980to1999DoesNotExist(self):
+        MockService.HttpHandler.currentMethodName = inspect.stack()[0][3]
+        super().test_averageRainfallForMiddleEarthFrom1980to1999DoesNotExist()
 
 

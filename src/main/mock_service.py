@@ -7,8 +7,14 @@ from src.main.mock_recording import MockRecording
 
 class HttpHandler(BaseHTTPRequestHandler):
 
+    currentMethodName = ""
+
     def do_GET(self):
         if is_valid_path(self.path):
+
+            # don't iterate over list, go direct to the .md file in question, via ...
+            print(os.path.dirname(os.path.realpath(__file__)).replace('main', 'mocks')
+                  + "/" + HttpHandler.currentMethodName.replace("test_", "") + ".md")
 
             recording = list(filter(lambda mock : mock.path == self.path, mock_recordings))[0]
             request_headers = get_dict_from_headers_string(str(self.headers).strip())
@@ -33,7 +39,6 @@ class HttpHandler(BaseHTTPRequestHandler):
             self.send_error(
             HTTPStatus.NOT_FOUND,
             "Unknown file path")
-
 
 class SimpleMarkdownParser:
 
@@ -107,9 +112,9 @@ def get_dict_from_headers_string(headers_string) -> {}:
 
 def start():
     server_address = ('localhost', 8099)
-    httpd = HTTPServer(server_address, HttpHandler)
+    httpHandler = HttpHandler
+    httpd = HTTPServer(server_address, httpHandler)
     httpd.serve_forever()
-
 
 if __name__ == "__main__":
     start()
