@@ -38,9 +38,8 @@ class HttpHandler(BaseHTTPRequestHandler):
 class SimpleMarkdownParser:
 
     @staticmethod
-    def __get_markdown_file_strings() -> [str]:
+    def __get_markdown_file_strings(mocks_path) -> [str]:
         file_strings = []
-        mocks_path = os.path.dirname(os.path.realpath(__file__)).replace('main', 'mocks')
 
         for filename in os.listdir(mocks_path):
             file_path = os.path.join(mocks_path, filename)
@@ -61,7 +60,8 @@ class SimpleMarkdownParser:
         return out
 
     def get_recordings(self) -> [MockRecording]:
-        markdown_raw_strings = self.__get_markdown_file_strings()
+        mocks_path = os.path.dirname(os.path.realpath(__file__)).replace('main', 'mocks')
+        markdown_raw_strings = self.__get_markdown_file_strings(mocks_path)
         return [self.__parse_markdown_string(string) for string in markdown_raw_strings]
 
     def __parse_markdown_string(self, markdown_string) -> MockRecording:
