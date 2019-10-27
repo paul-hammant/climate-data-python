@@ -3,10 +3,10 @@ import threading
 
 import pytest
 import src.main.mock_service as MockService
-from src.test.ClimateApiTests import ClimateApiTests
+from src.test.TestClimateApi import TestClimateApi
 
 
-class PlaybackClimateApiTests(ClimateApiTests):
+class TestPlaybackClimateApi(TestClimateApi):
 
     site = "http://localhost:8099"
     thread1 = threading.Thread(target=MockService.start, daemon=True)
@@ -14,7 +14,7 @@ class PlaybackClimateApiTests(ClimateApiTests):
 
     if __name__ == "__main__":
         try:
-            pytest.main(["-x", os.getcwd()+"/PlaybackClimateApiTests.py"])
+            pytest.main(["-x", os.getcwd()+"/TestPlaybackClimateApi.py"])
         finally:
             os._exit(1)
 
