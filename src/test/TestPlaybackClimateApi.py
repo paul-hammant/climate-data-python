@@ -33,7 +33,6 @@ class TestPlaybackClimateApi(TestClimateApi):
         MockService.HttpHandler.set_invoking_method(inspect.stack()[0][3])
         super().test_averageRainfallForEgyptFrom1980to1999Exists()
 
-
     def test_averageRainfallForGreatBritainFrom1985to1995DoesNotExist(self):
         MockService.HttpHandler.set_invoking_method(inspect.stack()[0][3])
         super().test_averageRainfallForGreatBritainFrom1985to1995DoesNotExist()
@@ -41,5 +40,9 @@ class TestPlaybackClimateApi(TestClimateApi):
     def test_averageRainfallForMiddleEarthFrom1980to1999DoesNotExist(self):
         MockService.HttpHandler.set_invoking_method(inspect.stack()[0][3])
         super().test_averageRainfallForMiddleEarthFrom1980to1999DoesNotExist()
+
+    def test_averageRainfallForGreatBritainAndFranceFrom1980to1999CanBeCalculatedFromTwoRequests(self):
+        MockService.HttpHandler.set_invoking_method(inspect.stack()[0][3])
+        super().test_averageRainfallForGreatBritainAndFranceFrom1980to1999CanBeCalculatedFromTwoRequests()
 
 

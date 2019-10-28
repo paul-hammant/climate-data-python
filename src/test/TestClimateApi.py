@@ -28,3 +28,9 @@ class TestClimateApi:
         with pytest.raises(AttributeError) as excinfo:
             self.climateApi.getAveAnnualRainfall(1980, 1999, "mde")
         assert "not recognized by climateweb" in excinfo.value.args[0]
+
+    def test_averageRainfallForGreatBritainAndFranceFrom1980to1999CanBeCalculatedFromTwoRequests(self):
+        rainfall = self.climateApi.getAveAnnualRainfall(1980, 1999, "gbr", "fra")
+        print("rainfall=" + str(rainfall))
+        assert rainfall == 951.3220963726872
+
