@@ -10,6 +10,7 @@ from src.test.TestClimateApi import TestClimateApi
 
 class TestPlaybackClimateApi(TestClimateApi):
 
+    # mock server is man-in-the-middle, overriding real site
     site = "http://localhost:8099"
 
     thread1 = threading.Thread(target=MockService.start, daemon=True)

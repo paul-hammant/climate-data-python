@@ -4,8 +4,7 @@ import xml.etree.ElementTree as ET
 
 class ClimateApi:
 
-    DEFAULT_CLIMATE_API_SITE = "http://climatedataapi.worldbank.org"
-    LOCAL_HOST = "http://localhost:8099"
+    CLIMATE_API_SITE = "http://climatedataapi.worldbank.org"
 
     def __init__(self, site):
         self.site = site
@@ -15,7 +14,6 @@ class ClimateApi:
         sum = 0
 
         for countryISO in countryISOs:
-            print("countryISO=" + str(countryISO))
             url = self.site + f"/climateweb/rest/v1/country/annualavg/pr/{fromCCYY}/{toCCYY}/{countryISO}.xml"
 
             try:
@@ -37,8 +35,5 @@ class ClimateApi:
                 raise AttributeError(f"date range {fromCCYY}-{toCCYY} not supported")
 
             sum = sum + (total / len(datums))
-
-        print("sum=" + str(sum))
-        print("len=" + str(len(countryISOs)))
 
         return sum / len(countryISOs)
