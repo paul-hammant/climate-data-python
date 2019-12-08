@@ -3,31 +3,38 @@
 ### Request headers recorded for playback:
 
 ```
-Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
-User-Agent: Servirtium-Testing
+Accept-Encoding: gzip, deflate
+Accept: */*
 Connection: keep-alive
 Host: climatedataapi.worldbank.org
+User-Agent: Servirtium-Testing
 ```
 
 ### Request body recorded for playback ():
 
 ```
 
+
 ```
 
 ### Response headers recorded for playback:
 
 ```
+Date: Sun, 08 Dec 2019 06:54:18 GMT
 Content-Type: application/xml
 Connection: keep-alive
-Set-Cookie: AWSALB=REPLACED-IN-RECORDING; Expires=Thu, 15 Jan 2099 11:11:11 GMT; Path=/
+Set-Cookie: AWSALB=b0fI6FmB5zj+vFbQZe/GFXPgJOv8CWocbnTUPqc+M3BJhJXfKVYO86v7T8FQCl+jLul/cYPAEpZ969a0Eb0UL8DKU0x0NWGICUPoPLvN0gJCmXYlbxWBzwpQegH4; Expires=Sun, 15 Dec 2019 06:54:18 GMT; Path=/, climatedata.cookie=1791010314.64288.0000; path=/; Httponly; Secure, TS01c35ec3=010640bd98a5a2fe7d1e813a5c1787a93ffba1f53e0fa39ce32d52ab5befe934c03047effbff73d7209da8bb0f4519938a95b1a1654c54e22259a61e56664644b1c45a2c88; Path=/, climatedataapi.cookie=299940106.33060.0000; path=/, climatedataapi_ext.cookie=2543955978.20480.0000; path=/, TS0137860d=017189f947728297637daccce23ad7fc10ad0807e9e798fd68036b6b8d7750768b4753a383804539b9fe02a30083171efca5dc4e51c375f888dc61e7c3849755eaf2e5f52c7282eba5b85314ba5fe9b56afab6b9a38ad681ebabdbb0a77f6eb0b8f2abf62b81ddecb0df683c2cda1b230f83238422; Path=/
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Headers: X-Requested-With
 Access-Control-Allow-Methods: GET
-Set-Cookie: TS01c35ec3=ONE-MORE-REPLACED-IN-RECORDING; Path=/
-Set-Cookie: climatedataapi.cookie=1234567899999; Path=/
-Set-Cookie: climatedataapi_ext.cookie=9876543211111; Path=/
-Set-Cookie: TS0137860d=ALSO-REPLACED-IN-RECORDING; Path=/
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Content-Security-Policy: default-src 'self'
+X-Frame-Options: deny
+Cache-Control: no-cache
+Secure: true
+HttpOnly: true
 Transfer-Encoding: chunked
 ```
 
@@ -178,29 +185,38 @@ Transfer-Encoding: chunked
 ### Request headers recorded for playback:
 
 ```
-Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
-User-Agent: Servirtium-Testing
+Accept-Encoding: gzip, deflate
+Accept: */*
 Connection: keep-alive
 Host: climatedataapi.worldbank.org
+User-Agent: Servirtium-Testing
 ```
 
 ### Request body recorded for playback ():
 
 ```
 
+
 ```
 
 ### Response headers recorded for playback:
 
 ```
+Date: Sun, 08 Dec 2019 06:54:19 GMT
 Content-Type: application/xml
 Connection: keep-alive
-Set-Cookie: AWSALB=REPLACED-IN-RECORDING; Expires=Thu, 15 Jan 2099 11:11:11 GMT; Path=/
+Set-Cookie: AWSALB=omMQCx02i4Ti3zvergtXSZSGW0vpAaINfJwEUK/o/jXuPc6IVV06RatPotaH3PKQBZI+qsm0iXoe34AK2rWA15pG5QUsKHumfJt6tN5TKxK0KsPBYElPY1zmlISG; Expires=Sun, 15 Dec 2019 06:54:19 GMT; Path=/, TS01c35ec3=010f7a2ab0a5e2a0f0d7df1048a61cbfcf088a12a920d234657a9ce67ff8507cf1e52a5a155cec74193e9fafd1aeea9d1cb303deea; Path=/, climatedataapi.cookie=316717322.33060.0000; path=/, climatedataapi_ext.cookie=2543955978.20480.0000; path=/, TS0137860d=017189f947b93542216e923672fbd0e335a37bd8c4b3da94d5a9e60706847b6d11a829f0afe6008f4a4a4a660aed4421b0c970c269b7d5388e1853b9da74c4058b7714cb5c21aae2cf8edfad2c85c8f0f12add86751642dffc07954976cb4167c39f6da61e; Path=/
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Headers: X-Requested-With
 Access-Control-Allow-Methods: GET
-Set-Cookie: TS01c35ec3=ONE-MORE-REPLACED-IN-RECORDING; Path=/
-Set-Cookie: TS0137860d=ALSO-REPLACED-IN-RECORDING; Path=/
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Content-Security-Policy: default-src 'self'
+X-Frame-Options: deny
+Cache-Control: no-cache
+Secure: true
+HttpOnly: true
 Transfer-Encoding: chunked
 ```
 
@@ -345,4 +361,3 @@ Transfer-Encoding: chunked
   </domain.web.AnnualGcmDatum>
 </list>
 ```
-

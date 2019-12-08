@@ -22,7 +22,6 @@ class ClimateApi:
 
                 if "Invalid country code. Three letters are required" in request_text:
                     raise AttributeError(f"{countryISO} not recognized by climateweb")
-
                 root = ET.fromstring(request_text)
             except requests.exceptions.RequestException as e:
                 raise Exception(f"Exception occurred when parsing XML : {e})")

@@ -2,17 +2,18 @@ import os
 from http.server import HTTPServer, BaseHTTPRequestHandler
 
 import requests
-from src.main.mock_recording import Interaction, MockRecording
+
+from definitions import MOCKS_DIR
+from src.main.mock_recording import Interaction
 from src.main.mock_service import SimpleMarkdownParser
 
 
-class Recording:
+class InteractionRecording:
 
     req_header_title = '### Request headers recorded for playback:'
     req_body_title = '### Request body recorded for playback ():'
 
     res_header_title = '### Response headers recorded for playback:'
-
 
     @staticmethod
     def get_response_body_title(interaction: Interaction):
@@ -33,7 +34,7 @@ class Recording:
     def __init__(self):
         self.interactions = []
 
-    def add_interaction(self, interaction : Interaction):
+    def add_interaction(self, interaction: Interaction):
         self.interactions.append(interaction)
 
     def to_markdown_string(self) -> str:
@@ -57,38 +58,43 @@ class Recording:
 
 
 class RecorderHttpHandler(BaseHTTPRequestHandler):
-    host = "http://climatedataapi.worldbank.org"
-    invoking_method = 'default_value_rec'
-    current_recording = Recording()
+    host = "default_host"
+    invoking_method = 'default_method'
+    current_recording = InteractionRecording()
 
     @staticmethod
     def set_invoking_method(method_name):
         RecorderHttpHandler.invoking_method = method_name
-        RecorderHttpHandler.current_recording = Recording()
+        RecorderHttpHandler.current_recording = InteractionRecording()
 
     def do_GET(self):
-
-        r_headers = self.headers
+        req_headers = self.headers
         replace_values = {'User-Agent': 'Servirtium-Testing', 'Host': self.host.replace('http://', '')}
 
-        for k, v in r_headers.items():
+        for k, v in req_headers.items():
             if k in replace_values.keys():
-                del(r_headers[k])
-                r_headers[k] = replace_values[k]
+                del(req_headers[k])
+                req_headers[k] = replace_values[k]
+
+        request_body = "\n"
+
+       # if 'content-length' in [x.lower() for x in self.headers.keys()]:
+       #     request_body = str(self.rfile.read(self.headers['content-length']), encoding='utf-8')
 
         test_file = SimpleMarkdownParser.get_recording_from_name(RecorderHttpHandler.invoking_method, mock_recordings)
-        response = requests.get(RecorderHttpHandler.host + self.path, headers=r_headers)
+
+        response = requests.get(RecorderHttpHandler.host + self.path, headers=req_headers)
 
         self.send_response(response.status_code)
         self.end_headers()
         self.wfile.write(response.content)
 
-        RecorderHttpHandler.current_recording.add_interaction(Interaction(request_headers=r_headers, request_body='\n', request_path=self.path,
+        RecorderHttpHandler.current_recording.add_interaction(Interaction(request_headers=req_headers, request_body=request_body, request_path=self.path,
                                                                           response_headers=response.headers, response_body=(str(response.content, encoding='utf-8')),
                                                                           response_code=response.status_code))
 
-        if len(RecorderHttpHandler.current_recording.interactions) == len(test_file.interactions): # Last interaction
-            f = open(RecorderHttpHandler.invoking_method + ".md", "w+")
+        if len(RecorderHttpHandler.current_recording.interactions) == len(test_file.interactions):  # Last interaction
+            f = open(MOCKS_DIR + RecorderHttpHandler.invoking_method.replace("test_", '') + ".md", "w+")
             f.write(RecorderHttpHandler.current_recording.to_markdown_string())
             f.close()
 

@@ -15,7 +15,6 @@ class TestRecordingClimateApi(TestClimateApi):
     thread1 = threading.Thread(target=MockRecorder.start, daemon=True)
     thread1.start()
 
-
     if __name__ == "__main__":
         try:
             pytest.main(["-x", os.getcwd()+"/TestRecordingClimateApi.py"])

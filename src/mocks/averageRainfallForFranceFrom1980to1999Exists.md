@@ -3,31 +3,38 @@
 ### Request headers recorded for playback:
 
 ```
-Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
-User-Agent: Servirtium-Testing
+Accept-Encoding: gzip, deflate
+Accept: */*
 Connection: keep-alive
 Host: climatedataapi.worldbank.org
+User-Agent: Servirtium-Testing
 ```
 
 ### Request body recorded for playback ():
 
 ```
 
+
 ```
 
 ### Response headers recorded for playback:
 
 ```
+Date: Sun, 08 Dec 2019 06:54:12 GMT
 Content-Type: application/xml
 Connection: keep-alive
-Set-Cookie: AWSALB=REPLACED-IN-RECORDING; Expires=Thu, 15 Jan 2099 11:11:11 GMT; Path=/
+Set-Cookie: AWSALB=RSVK94tkXRDBY/Xi5qgjVpQ6GGmoAIsIiarPKr0QagmsfZXW9WoCL+9vCTkV9VVYM7HBgCaUSAAYsbXjaHajE54snStFJnm9v0euY5uQ4EswDTN9K2nYz27Sp5Rt; Expires=Sun, 15 Dec 2019 06:54:12 GMT; Path=/, climatedata.cookie=2093065738.64288.0000; path=/; Httponly; Secure, TS01c35ec3=010640bd9837728bc0c63a34f5669e13c27d735546aa08806f4b26ba455078b2e499ae45951344740df03e3dee054e3149f0bbdbadec018b68c91af7d386ffc3bfc8589dc4; Path=/, climatedataapi.cookie=2631971082.33060.0000; path=/, climatedataapi_ext.cookie=2543955978.20480.0000; path=/, TS0137860d=017189f947b9b0576f75db78e34bbeab926aed6466755c692b57e2234690f8f308f747f38b030306af2d3d655f8f9f465b993b08e909b8b9cb97ec2383bc50966e9209ddd840997a04797d02007131ec394d01362f844eedb95b4109bd4e1c80e4269ecd84f813600d5177c3d7d11f1cca79fa397e; Path=/
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Headers: X-Requested-With
 Access-Control-Allow-Methods: GET
-Set-Cookie: TS01c35ec3=ONE-MORE-REPLACED-IN-RECORDING; Path=/
-Set-Cookie: climatedataapi.cookie=1234567899999; Path=/
-Set-Cookie: climatedataapi_ext.cookie=9876543211111; Path=/
-Set-Cookie: TS0137860d=ALSO-REPLACED-IN-RECORDING; Path=/
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Content-Security-Policy: default-src 'self'
+X-Frame-Options: deny
+Cache-Control: no-cache
+Secure: true
+HttpOnly: true
 Transfer-Encoding: chunked
 ```
 
@@ -172,4 +179,3 @@ Transfer-Encoding: chunked
   </domain.web.AnnualGcmDatum>
 </list>
 ```
-
