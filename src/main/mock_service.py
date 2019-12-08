@@ -16,11 +16,11 @@ class HttpHandler(BaseHTTPRequestHandler):
         HttpHandler.invoking_method = method_name
 
     def do_GET(self):
-        test_file = get_recording_from_name(HttpHandler.invoking_method)
+        test_file = SimpleMarkdownParser.get_recording_from_name(HttpHandler.invoking_method, mock_recordings)
 
-        if is_valid_path(self.path) and test_file:
+        if SimpleMarkdownParser.is_valid_path(self.path) and test_file:
             interaction = self.get_interaction_from_path(self.path, test_file.interactions)
-            request_headers = get_dict_from_headers_string(str(self.headers).strip())
+            request_headers = SimpleMarkdownParser.get_dict_from_headers_string(str(self.headers).strip())
 
             if interaction.request_headers == request_headers or True:  # Headers currently don't match
                 self.send_response(200)
@@ -39,6 +39,25 @@ class HttpHandler(BaseHTTPRequestHandler):
 
 
 class SimpleMarkdownParser:
+
+    @staticmethod
+    def get_recording_from_name(method_name: str, mock_recordings: [MockRecording]) -> MockRecording:
+        recordings = list(filter(lambda mock: mock.file_name.replace('.md', '') in method_name, mock_recordings))
+        return recordings[0] if len(recordings) > 0 else None
+
+    @staticmethod
+    def is_valid_path(path) -> bool:
+        return bool(filter(lambda x: x.path == path, [i.interactions for i in [m for m in mock_recordings]]))
+
+    @staticmethod
+    def get_dict_from_headers_string(headers_string) -> {}:
+        out = {}
+        lines = headers_string.split('\n')
+
+        for line in lines:
+            line_split = [l.strip().replace('\n', '') for l in line.split(':')]
+            out[line_split[0]] = line_split[1]
+        return out
 
     @staticmethod
     def __get_markdown_file_strings(mocks_path) -> [(str, str)]:
@@ -96,27 +115,10 @@ class SimpleMarkdownParser:
         return MockRecording(file_name=file_name, interactions=recording_interactions)
 
 
+
 parser = SimpleMarkdownParser()
 mock_recordings = parser.get_recordings(os.path.dirname(os.path.realpath(__file__)).replace('main', 'mocks'))
 
-
-def get_recording_from_name(method_name: str) -> MockRecording:
-    recordings = list(filter(lambda mock:  mock.file_name.replace('.md', '') in method_name, mock_recordings))
-    return recordings[0] if len(recordings) > 0 else None
-
-
-def is_valid_path(path) -> bool:
-    return bool(filter(lambda x : x.path == path, [i.interactions for i in [m for m in mock_recordings]]))
-
-
-def get_dict_from_headers_string(headers_string) -> {}:
-    out = {}
-    lines = headers_string.split('\n')
-
-    for line in lines:
-        line_split = [l.strip().replace('\n', '') for l in line.split(':')]
-        out[line_split[0]] = line_split[1]
-    return out
 
 
 def start():

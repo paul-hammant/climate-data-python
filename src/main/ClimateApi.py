@@ -17,8 +17,8 @@ class ClimateApi:
             url = self.site + f"/climateweb/rest/v1/country/annualavg/pr/{fromCCYY}/{toCCYY}/{countryISO}.xml"
 
             try:
-                request = requests.get(url)
-                request_text = request.text
+                response = requests.get(url)
+                request_text = response.text
 
                 if "Invalid country code. Three letters are required" in request_text:
                     raise AttributeError(f"{countryISO} not recognized by climateweb")
