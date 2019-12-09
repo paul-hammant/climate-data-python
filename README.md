@@ -1,27 +1,41 @@
-## Running it
+## setup
 
-This requires Python3
+This requires Python3, and a locally built 'servirtium-python' library. See https://github.com/servirtium/servirtium-python.
 
 ```
 pip3 install pytest requests
+```
+
+## Running the climate API tests directly against World Bank's Climate HTTP API.
+
+```
 python3 -m pytest src/test/TestClimateApi.py
 ```
 
 That runs five tests, which should all pass, directly 
-targeting a WHO climate API.
+targeting a WHO climate API. And specifically, there's no Servirtium involved in that.
 
-Next, try this:
+## Tests with playing back previously recorded World Bank's Climate HTTP API, via Servirtium
 
 ```
 python3 -m pytest src/test/TestPlaybackClimateApi.py
 ```
 
-That runs five tests, which should all pass, this 
-time using a pre-recorded interaction with that WHO
+That runs five tests, which should all pass again. This 
+time using a pre-recorded interactions with that Word Bank
 climate API, instead of the real thing.
 
 (actually it runs 10 tests, but we can't work out how
 to make it run only the 5 subclass test methods)
+
+## Tests that re-record World Bank's Climate HTTP API, via Servirtium
+
+```
+python3 -m pytest src/test/TestRecordingClimateApi.py
+```
+
+Again this runs five tests, which all pass again. Check the src/mocks/ folder after the
+tests have run.
 
 ## Credits:
 
