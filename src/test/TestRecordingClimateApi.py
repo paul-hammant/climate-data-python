@@ -3,14 +3,16 @@ import os
 import threading
 import pytest
 
+from definitions import MOCKS_DIR
 from src.main.ClimateApi import ClimateApi
 from src.test.TestClimateApi import TestClimateApi
-import src.main.mock_recorder as MockRecorder
+import servirtium.servirtium_recorder as MockRecorder
 
 
 class TestRecordingClimateApi(TestClimateApi):
     site = "http://localhost:8099"
 
+    MockRecorder.set_markdown_files(MOCKS_DIR)
     MockRecorder.set_real_host('http://climatedataapi.worldbank.org')
     thread1 = threading.Thread(target=MockRecorder.start, daemon=True)
     thread1.start()

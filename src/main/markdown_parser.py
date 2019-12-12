@@ -45,6 +45,10 @@ class SimpleMarkdownParser:
             out[line_split[0]] = line_split[1]
         return out
 
+
+    def set_mocks_path(self, mocks_path):
+        pass
+
     def get_recordings(self, mocks_path) -> [MockRecording]:
         markdown_raw_strings = self.__get_markdown_file_strings(mocks_path)
         return [self.__parse_markdown_string(s1, s2) for (s1, s2) in markdown_raw_strings]
@@ -78,3 +82,4 @@ class SimpleMarkdownParser:
                              response_headers=response_headers, response_body=response_body))
 
         return MockRecording(file_name=file_name, interactions=recording_interactions)
+

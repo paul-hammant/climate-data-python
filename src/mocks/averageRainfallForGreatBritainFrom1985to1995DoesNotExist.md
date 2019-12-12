@@ -20,10 +20,10 @@ User-Agent: Servirtium-Testing
 ### Response headers recorded for playback:
 
 ```
-Date: Sun, 08 Dec 2019 06:54:15 GMT
+Date: Thu, 12 Dec 2019 19:24:02 GMT
 Content-Type: application/xml
 Connection: keep-alive
-Set-Cookie: AWSALB=i+WrnsIEDXq/wujkk5oIJ4RYYizeqCkLqPuKIuaiC40yTYVMgX0mx6EVsHTdTapHNSZ9QKZRbd199shhKhTvxKNcWUxnLHBMf8hDp+QK4Y8fOLgshPKrKL6TVDD7; Expires=Sun, 15 Dec 2019 06:54:15 GMT; Path=/, TS01c35ec3=010f7a2ab0189240ef05c578737c1614edf096b19876d4464c7d7a325a9272b2b700844e9df6adfe1c96d2e52f31aae0360b4c2956; Path=/, climatedataapi.cookie=299940106.33060.0000; path=/, climatedataapi_ext.cookie=2543955978.20480.0000; path=/, TS0137860d=017189f947a14c43dd776321e723c9cd6bc2df96af048893cb21880319bd3d135a50b2746592258c48b7ae357dbfb07287a035f25f1733ff093cd3d12b24f64399c39b7bff4f9ab492c249391d23538c01e0f4f3d7b51a8b70f3ad16dbc844185fe4a65435; Path=/
+Set-Cookie: AWSALB=OysOVNp42x+9Hx6ZcAnCGKHo1iSkz7zv4e/jU6I1aYRG/3EX2fsWmzm00BFsTCr30uBMvSjmygCKi9JNj0cboqlfzZfeXdihHgd9Vyz7SoQWAVTTPLcSys4QY168; Expires=Thu, 19 Dec 2019 19:24:02 GMT; Path=/, TS01c35ec3=010f7a2ab012fa76d45f2e512206614e69f936e4fe44e8476942dc9fb6e85b3024a075813077b4eae884112b1917d8eafd8e8640fb; Path=/, climatedataapi.cookie=2631971082.33060.0000; path=/, climatedataapi_ext.cookie=2543958026.20480.0000; path=/, TS0137860d=01359ee976051d92c6d28e19b997969614ba26d734b046f49b055c1a5fc203de94e125023592c2d3c8b5ef14964e45e65963808c0d809e349a5934d4abb3d9588c3669238e15e5ca4fa8b03fcb2519e62e0370b101b6ae353e4928db91a813b4fa11299c64; Path=/
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Headers: X-Requested-With
 Access-Control-Allow-Methods: GET

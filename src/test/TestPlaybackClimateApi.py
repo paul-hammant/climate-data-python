@@ -4,7 +4,10 @@ import sys
 import threading
 
 import pytest
-import src.main.mock_service as MockService
+
+import servirtium.servirtium_service as MockService
+
+from definitions import MOCKS_DIR
 from src.test.TestClimateApi import TestClimateApi
 
 
@@ -13,6 +16,9 @@ class TestPlaybackClimateApi(TestClimateApi):
     # mock server is man-in-the-middle, overriding real site
     site = "http://localhost:8099"
 
+    # mock_recordings = parser.get_recordings(os.path.dirname(os.path.realpath(__file__)).replace('main', 'mocks'))
+
+    MockService.set_markdown_files(MOCKS_DIR)
     thread1 = threading.Thread(target=MockService.start, daemon=True)
     thread1.start()
 
