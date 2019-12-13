@@ -6,7 +6,7 @@ import pytest
 from definitions import MOCKS_DIR
 from src.main.ClimateApi import ClimateApi
 from src.test.TestClimateApi import TestClimateApi
-import servirtium.servirtium_recorder as MockRecorder
+import servirtium.recorder as MockRecorder
 
 
 class TestRecordingClimateApi(TestClimateApi):

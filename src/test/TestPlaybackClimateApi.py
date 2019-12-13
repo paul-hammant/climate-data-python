@@ -5,7 +5,7 @@ import threading
 
 import pytest
 
-import servirtium.servirtium_service as MockService
+import servirtium.playback as MockService
 
 from definitions import MOCKS_DIR
 from src.test.TestClimateApi import TestClimateApi
