@@ -14,6 +14,8 @@ class TestRecordingClimateApi(TestClimateApi):
 
     MockRecorder.set_markdown_files(MOCKS_DIR)
     MockRecorder.set_real_host('http://climatedataapi.worldbank.org')
+    MockRecorder.set_request_header_replacements({'User-Agent': 'Servirtium-Testing'})
+
     thread1 = threading.Thread(target=MockRecorder.start, daemon=True)
     thread1.start()
 
