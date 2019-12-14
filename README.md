@@ -1,6 +1,6 @@
 ## setup
 
-This requires Python3, and a locally built 'servirtium-python' library. See https://github.com/servirtium/servirtium-python.
+This requires Python3, and a locally installed 'servirtium-python' library. See https://github.com/servirtium/servirtium-python. Do a `pip3 install -e .` for that repo/project/package first.
 
 ```
 pip3 install pytest requests
