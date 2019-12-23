@@ -10,15 +10,15 @@ import servirtium.recorder as MockRecorder
 
 
 class TestRecordingClimateApi(TestClimateApi):
-    site = "http://localhost:8099"
+    servirtium_site = "http://localhost:61417"
 
     MockRecorder.set_markdown_files(MOCKS_DIR)
     MockRecorder.set_real_host('http://climatedataapi.worldbank.org')
     MockRecorder.set_request_header_replacements({'User-Agent': 'Servirtium-Testing'})
     MockRecorder.set_response_header_removals({'Set-Cookie: AWSALB', 'X-', "Date:"})
 
-    thread1 = threading.Thread(target=MockRecorder.start, daemon=True)
-    thread1.start()
+    servirtium_daemon = threading.Thread(target=MockRecorder.start, daemon=True)
+    servirtium_daemon.start()
 
     if __name__ == "__main__":
         try:
@@ -28,15 +28,16 @@ class TestRecordingClimateApi(TestClimateApi):
 
     @pytest.fixture(autouse=True)
     def startup(self):
-        self.climateApi = ClimateApi(self.site)
+        self.climateApi = ClimateApi(self.servirtium_site)
+
+    def test_averageRainfallForFranceFrom1980to1999Exists(self):
+        MockRecorder.RecorderHttpHandler.set_invoking_method(inspect.stack()[0][3])
+        assert self.climateApi.getAveAnnualRainfall(1980, 1999, "fra") == 913.7986955122727
 
     def test_averageRainfallForGreatBritainFrom1980to1999Exists(self):
         MockRecorder.RecorderHttpHandler.set_invoking_method(inspect.stack()[0][3])
         assert self.climateApi.getAveAnnualRainfall(1980, 1999, "gbr") == 988.8454972331015
 
-    def test_averageRainfallForFranceFrom1980to1999Exists(self):
-        MockRecorder.RecorderHttpHandler.set_invoking_method(inspect.stack()[0][3])
-        assert self.climateApi.getAveAnnualRainfall(1980, 1999, "fra") == 913.7986955122727
 
     def test_averageRainfallForEgyptFrom1980to1999Exists(self):
         MockRecorder.RecorderHttpHandler.set_invoking_method(inspect.stack()[0][3])

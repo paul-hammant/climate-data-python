@@ -20,7 +20,6 @@ Connection: keep-alive
 ### Response headers recorded for playback:
 
 ```
-Date: Fri, 13 Dec 2019 23:05:55 GMT
 Content-Type: application/xml
 Connection: keep-alive
 Access-Control-Allow-Origin: *
