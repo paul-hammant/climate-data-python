@@ -13,18 +13,12 @@ class TestRecordingClimateApi(TestClimateApi):
     servirtium_site = "http://localhost:61417"
 
     MockRecorder.set_markdown_files(MOCKS_DIR)
-    MockRecorder.set_real_host('http://climatedataapi.worldbank.org')
+    MockRecorder.set_real_service('http://climatedataapi.worldbank.org')
     MockRecorder.set_request_header_replacements({'User-Agent': 'Servirtium-Testing'})
     MockRecorder.set_response_header_removals({'Set-Cookie: AWSALB', 'X-', "Date:"})
 
     servirtium_daemon = threading.Thread(target=MockRecorder.start, daemon=True)
     servirtium_daemon.start()
-
-    if __name__ == "__main__":
-        try:
-            pytest.main(["-x", os.getcwd()+"/TestRecordingClimateApi.py"])
-        finally:
-            os._exit(1)
 
     @pytest.fixture(autouse=True)
     def startup(self):

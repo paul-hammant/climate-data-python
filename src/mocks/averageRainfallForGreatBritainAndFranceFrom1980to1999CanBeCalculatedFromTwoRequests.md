@@ -21,6 +21,7 @@ Connection: keep-alive
 
 ```
 Content-Type: application/xml
+Connection: keep-alive
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Headers: X-Requested-With
 Access-Control-Allow-Methods: GET
@@ -197,6 +198,7 @@ Connection: keep-alive
 
 ```
 Content-Type: application/xml
+Connection: keep-alive
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Headers: X-Requested-With
 Access-Control-Allow-Methods: GET
