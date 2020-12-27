@@ -1,4 +1,4 @@
-## Interaction 0: GET /climateweb/rest/v1/country/annualavg/pr/1980/1999/gbr.xml
+## Interaction 5: GET /climateweb/rest/v1/country/annualavg/pr/1980/1999/gbr.xml
 
 ### Request headers recorded for playback:
 
@@ -20,14 +20,20 @@ Connection: keep-alive
 ### Response headers recorded for playback:
 
 ```
+Date: Sun, 27 Dec 2020 14:53:21 GMT
 Content-Type: application/xml
 Connection: keep-alive
+Set-Cookie: AWSALB=4QY1EDtOX5P3LzGEwUPl4vlwcuJXDCdfEL+CAZcbTMgjdZbGQlayUGx744EUvLws0ipQKzs9K+oijYaBk032hyel1PcDFcUQNYgZeLwYYwOddX4Hee5ea5DKSA7j; Expires=Sun, 03 Jan 2021 14:53:21 GMT; Path=/, AWSALBCORS=4QY1EDtOX5P3LzGEwUPl4vlwcuJXDCdfEL+CAZcbTMgjdZbGQlayUGx744EUvLws0ipQKzs9K+oijYaBk032hyel1PcDFcUQNYgZeLwYYwOddX4Hee5ea5DKSA7j; Expires=Sun, 03 Jan 2021 14:53:21 GMT; Path=/; SameSite=None; Secure, TS01c35ec3=010f7a2ab0ed6c2ae7ee5eeb91c30d0ab6856782bf8d832690b75ed9f66c2aabb716f0ff2e01d913ba8366513c9ba3a24892f6d6a5; Path=/, climatedataapi.cookie=299940106.33060.0000; path=/; Httponly, climatedataapi_ext.cookie=2543958026.20480.0000; path=/; Httponly, TS0137860d=01359ee976b7cc2e14161a79b4540874d9c866633be5a53a06080277f99d4e4e1269937f3d2be6d67571170e2302e74da22f77569fea35192d1e7a697f4c1a50c18bad058976f870f78af17344d4dabed8ce93dc796a96db813bb1ed2867fe93f251720faafbafbe8051b317d394639da5c443f11a6c732e89b85add135f811621bb6d3bb9; Path=/
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Headers: X-Requested-With
 Access-Control-Allow-Methods: GET
 Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
 Content-Security-Policy: default-src 'self'
-Cache-Control: no-cache
+X-Frame-Options: deny
+Cache-Control: no-cache,no-store
+Pragma: no-cache
 Secure: true
 HttpOnly: true
 Transfer-Encoding: chunked
@@ -174,8 +180,7 @@ Transfer-Encoding: chunked
   </domain.web.AnnualGcmDatum>
 </list>
 ```
-
-## Interaction 1: GET /climateweb/rest/v1/country/annualavg/pr/1980/1999/fra.xml
+## Interaction 6: GET /climateweb/rest/v1/country/annualavg/pr/1980/1999/fra.xml
 
 ### Request headers recorded for playback:
 
@@ -197,14 +202,20 @@ Connection: keep-alive
 ### Response headers recorded for playback:
 
 ```
+Date: Sun, 27 Dec 2020 14:53:21 GMT
 Content-Type: application/xml
 Connection: keep-alive
+Set-Cookie: AWSALB=1hulZfQoCv8C2orgAMNCax69Q0WUSWNPlvR6uanbe3lyjOwt1QUy/6+WQP9+g4HQzF6Nhx8FXsjF25XIHT1Xo5Q5nWBCWQA/UImfhQ0Z5z9Mg34Pvx/iLArzzh87; Expires=Sun, 03 Jan 2021 14:53:21 GMT; Path=/, AWSALBCORS=1hulZfQoCv8C2orgAMNCax69Q0WUSWNPlvR6uanbe3lyjOwt1QUy/6+WQP9+g4HQzF6Nhx8FXsjF25XIHT1Xo5Q5nWBCWQA/UImfhQ0Z5z9Mg34Pvx/iLArzzh87; Expires=Sun, 03 Jan 2021 14:53:21 GMT; Path=/; SameSite=None; Secure, TS01c35ec3=010640bd986385fc322b93732c5bff33bf77a944b725c63cbf0495909c1818e63b62996858a889ecb98d703f36cabac4ab8b317af2; Path=/, climatedataapi.cookie=299940106.33060.0000; path=/; Httponly, climatedataapi_ext.cookie=2543958026.20480.0000; path=/; Httponly, TS0137860d=01359ee976502005fc49884d9d682fb120b084bef183072405b1c544c79db18161f334bb369838f0e6f79c5324ac2ef582e365da30421cfddcb5ce33a03e18aed991308fd2f5bc4a398e537fdc4aa5b1caaa6f332116c1208a8e7e309405feeaafa17e0ac0f4eb8234f1621875a71f635afa05f76212ee0504d41c4513f67b70764d4798d0; Path=/
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Headers: X-Requested-With
 Access-Control-Allow-Methods: GET
 Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
 Content-Security-Policy: default-src 'self'
-Cache-Control: no-cache
+X-Frame-Options: deny
+Cache-Control: no-cache,no-store
+Pragma: no-cache
 Secure: true
 HttpOnly: true
 Transfer-Encoding: chunked

@@ -6,8 +6,9 @@ import threading
 import pytest
 
 import servirtium.playback as MockService
+from servirtium.markdown_parser import get_markdown_file_strings
 
-from definitions import MOCKS_DIR
+from definitions import MOCKS_DIR, ROOT_DIR
 from src.test.TestClimateApi import TestClimateApi
 
 
@@ -18,7 +19,9 @@ class TestPlaybackClimateApi(TestClimateApi):
 
     # mock_recordings = parser.get_recordings(os.path.dirname(os.path.realpath(__file__)).replace('main', 'mocks'))
 
-    MockService.set_mocks_dir(MOCKS_DIR)
+    files = get_markdown_file_strings(ROOT_DIR + "/src/mocks")
+    MockService.parser._set_mock_files(files)
+
     thread1 = threading.Thread(target=MockService.start, daemon=True)
     thread1.start()
 
