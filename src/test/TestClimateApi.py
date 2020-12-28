@@ -4,7 +4,6 @@ from src.main.ClimateApi import ClimateApi
 
 
 class TestClimateApi:
-
     site = ClimateApi.CLIMATE_API_SITE
 
     @pytest.fixture(autouse=True)
@@ -33,4 +32,3 @@ class TestClimateApi:
     def test_averageRainfallForGreatBritainAndFranceFrom1980to1999CanBeCalculatedFromTwoRequests(self):
         rainfall = self.climateApi.getAveAnnualRainfall(1980, 1999, "gbr", "fra")
         assert rainfall == 951.3220963726872
-

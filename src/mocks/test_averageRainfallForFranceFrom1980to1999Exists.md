@@ -20,14 +20,20 @@ Connection: keep-alive
 ### Response headers recorded for playback:
 
 ```
+Date: Mon, 28 Dec 2020 13:54:00 GMT
 Content-Type: application/xml
 Connection: keep-alive
+Set-Cookie: AWSALB=yRyxLe1BEWHkw33ooq+5gVDSQKF+tfX+EyWpplQABlyFXeSUGXH2SGwqyNsAQhh28nE7kC2ZxAS0nCcgSu8ir4lfbLSYNb0JNw2VYGFnuEziEarbX2rqXAwNkAFf; Expires=Mon, 04 Jan 2021 13:54:00 GMT; Path=/, AWSALBCORS=yRyxLe1BEWHkw33ooq+5gVDSQKF+tfX+EyWpplQABlyFXeSUGXH2SGwqyNsAQhh28nE7kC2ZxAS0nCcgSu8ir4lfbLSYNb0JNw2VYGFnuEziEarbX2rqXAwNkAFf; Expires=Mon, 04 Jan 2021 13:54:00 GMT; Path=/; SameSite=None; Secure, TS01c35ec3=010640bd987ac107329bfc980bf16ff13d4f54bb3669ff2f7af826a470439a948fbfcd99e3c183e1a503b5b2462be01c31602fdde6; Path=/, climatedataapi.cookie=2615193866.33060.0000; path=/; Httponly, climatedataapi_ext.cookie=2543958026.20480.0000; path=/; Httponly, TS0137860d=01359ee976bffb3dc05a26c54b4b4ed0cb6cc58341938c33f938a21351a39dfe0c1da8cf751da93ca389d12fafebf8e7b277bfddc683aaae2aefcf43d80cdb646a178f344b86f21a57b9177f9efbca39f1917966ca2163932372eab22d4d045719147de7e4bdb4f75b768a0df7fbea64117a51d7862c67f88415d6714cab5828d6f0d1e96b; Path=/
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Headers: X-Requested-With
 Access-Control-Allow-Methods: GET
 Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
 Content-Security-Policy: default-src 'self'
-Cache-Control: no-cache
+X-Frame-Options: deny
+Cache-Control: no-cache,no-store
+Pragma: no-cache
 Secure: true
 HttpOnly: true
 Transfer-Encoding: chunked

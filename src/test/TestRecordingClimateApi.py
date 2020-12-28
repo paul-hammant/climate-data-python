@@ -1,12 +1,12 @@
 import inspect
-import os
 import threading
+
 import pytest
+import servirtium.recorder as MockRecorder
 
 from definitions import MOCKS_DIR
 from src.main.ClimateApi import ClimateApi
 from src.test.TestClimateApi import TestClimateApi
-import servirtium.recorder as MockRecorder
 
 
 class TestRecordingClimateApi(TestClimateApi):
@@ -31,7 +31,6 @@ class TestRecordingClimateApi(TestClimateApi):
     def test_averageRainfallForGreatBritainFrom1980to1999Exists(self):
         MockRecorder.RecorderHttpHandler.set_markdown_filename(inspect.stack()[0][3])
         assert self.climateApi.getAveAnnualRainfall(1980, 1999, "gbr") == 988.8454972331015
-
 
     def test_averageRainfallForEgyptFrom1980to1999Exists(self):
         MockRecorder.RecorderHttpHandler.set_markdown_filename(inspect.stack()[0][3])

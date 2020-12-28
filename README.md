@@ -1,9 +1,11 @@
 ## setup
 
-This requires Python3, and a locally installed 'servirtium-python' library. See https://github.com/servirtium/servirtium-python. Do a `pip3 install -e .` for that repo/project/package first.
+This requires Python3, and a locally installed 'servirtium-python' library. 
+See https://github.com/servirtium/servirtium-python. 
 
+Install all required packages using:
 ```
-pip3 install pytest requests
+pip3 install -r requirements.txt
 ```
 
 ## Running the climate API tests directly against World Bank's Climate HTTP API.
