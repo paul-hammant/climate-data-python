@@ -1,4 +1,4 @@
-## Interaction 3: GET /climateweb/rest/v1/country/annualavg/pr/1985/1995/gbr.xml
+## Interaction 0: GET /climateweb/rest/v1/country/annualavg/pr/1985/1995/gbr.xml
 
 ### Request headers recorded for playback:
 
@@ -20,10 +20,10 @@ Connection: keep-alive
 ### Response headers recorded for playback:
 
 ```
-Date: Sun, 27 Dec 2020 14:53:20 GMT
+Date: Mon, 28 Dec 2020 04:41:20 GMT
 Content-Type: application/xml
 Connection: keep-alive
-Set-Cookie: AWSALB=4N812DCIB9DwBRT6DpxrsiVdkwtaJpAOkvkqVLMBBdbRmUhkXZLS+U5c2CQ3d+u7AqM6vFhx9fH2BDPr8csvsvngxDrGutXlTdhpfp4lP23xgYjV5Eo2DuBZMoaK; Expires=Sun, 03 Jan 2021 14:53:20 GMT; Path=/, AWSALBCORS=4N812DCIB9DwBRT6DpxrsiVdkwtaJpAOkvkqVLMBBdbRmUhkXZLS+U5c2CQ3d+u7AqM6vFhx9fH2BDPr8csvsvngxDrGutXlTdhpfp4lP23xgYjV5Eo2DuBZMoaK; Expires=Sun, 03 Jan 2021 14:53:20 GMT; Path=/; SameSite=None; Secure, TS01c35ec3=010640bd9878c3c2fd564bd8d89e9b18c39bd6441994757035a36df025bd0a916d5f218d38c877b704345638e52af52b003d543ad1; Path=/, climatedataapi.cookie=2631971082.33060.0000; path=/; Httponly, climatedataapi_ext.cookie=2543958026.20480.0000; path=/; Httponly, TS0137860d=01359ee976b6276f214f5ddabf9521f79bd73e026d66b115ade795da0308c64e832ac8850f177a947de51e7d139025e65299bc37da0a031172b2930dd19c691d5699a43f0b5762a885aa26f0d8235b8e6f48b27ca3a562d92886a5f981d678fb746b258d7025585e41365e19ee17c4e6dcc82716d82e2266c9f26dfb925016fee7ee597986; Path=/
+Set-Cookie: AWSALB=SiNh4Eb1ilOeEixjJh7w9P93mQ14W7lMYtkz8XC4j0Q83YqDZ2uXZh8MAOlyIfsQppdVgkUsi4wnHCNG1Hs1lVMA3Yz8Se+3ng4ScLos3JTdDDvOS3g5lT4ILA4I; Expires=Mon, 04 Jan 2021 04:41:20 GMT; Path=/, AWSALBCORS=SiNh4Eb1ilOeEixjJh7w9P93mQ14W7lMYtkz8XC4j0Q83YqDZ2uXZh8MAOlyIfsQppdVgkUsi4wnHCNG1Hs1lVMA3Yz8Se+3ng4ScLos3JTdDDvOS3g5lT4ILA4I; Expires=Mon, 04 Jan 2021 04:41:20 GMT; Path=/; SameSite=None; Secure, climatedata.cookie=2093065738.64288.0000; path=/; Httponly; Secure, TS01c35ec3=010f7a2ab046ac80d2b6e5ffd7e08deb46adb69a94d65b776b8be81e493dd9d5be50476f7497c052af20256d46bde8dfbbfa49c30838f7788520bf7889d9345115119e1b78; Path=/, climatedataapi.cookie=316717322.33060.0000; path=/; Httponly, climatedataapi_ext.cookie=2543958026.20480.0000; path=/; Httponly, TS0137860d=01359ee976e6d437024af3c7ba9f547287098ea0d53759673d3ed8ec0389ecad7d4cb62318aa543c1f955ffb7272f1e0ea7934d2314f5b8e314e67e8d20ee48f92e26cf043252510bbbf496d98021458387dbc7d21ca8aee091e3ce7dd61c656ef8d34e70b362d9152eae8c17b568c468fba222d3e4e085aa2ad20bd85b64244e80fd62acfd2dc86ea42cb806595a56201f792bbff; Path=/
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Headers: X-Requested-With
 Access-Control-Allow-Methods: GET

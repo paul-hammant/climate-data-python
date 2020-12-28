@@ -20,10 +20,10 @@ Connection: keep-alive
 ### Response headers recorded for playback:
 
 ```
-Date: Sun, 27 Dec 2020 14:53:18 GMT
+Date: Mon, 28 Dec 2020 04:41:10 GMT
 Content-Type: application/xml
 Connection: keep-alive
-Set-Cookie: AWSALB=hkxWAKjuJnUZqDvePaJp6gVXYvoS+Qb4sj41IrIpzM17lWfI+I8Rg/jQkotUk0u9kqXDYYEev/AiuwBFi8ntTNX4KQZ4Hm6ixehJWpTVxQW1dn2uuj03+/+BXOvF; Expires=Sun, 03 Jan 2021 14:53:17 GMT; Path=/, AWSALBCORS=hkxWAKjuJnUZqDvePaJp6gVXYvoS+Qb4sj41IrIpzM17lWfI+I8Rg/jQkotUk0u9kqXDYYEev/AiuwBFi8ntTNX4KQZ4Hm6ixehJWpTVxQW1dn2uuj03+/+BXOvF; Expires=Sun, 03 Jan 2021 14:53:17 GMT; Path=/; SameSite=None; Secure, climatedata.cookie=1791010314.64288.0000; path=/; Httponly; Secure, TS01c35ec3=010f7a2ab016c30998234251c2dc3fc0d8d6bca446806c4299f542798220b29aff790b545eccaaf2612a19f4c5121843cd1cf8bfdd29861697493496fa73fe10c3f75f2ed8; Path=/, climatedataapi.cookie=316717322.33060.0000; path=/; Httponly, climatedataapi_ext.cookie=2543958026.20480.0000; path=/; Httponly, TS0137860d=01359ee9769f3fb510f46c33f4339273f7ce8ea03a3cd4a939798d4f7e9ba88ae3d21a287916dd6e734ba4290b0c02b96227b3689bdbdddbfa7d69a318db48863bb460f792d70923833938cce777978b53554010a89ea7e7e1cc08b1c81ba7a1bf594d7c80adb243cc61195ccd5c82aea3adabab38286186ac5160b09df95ceca832d7defa52d9b0befee4953ece10ba01d2afb6da; Path=/
+Set-Cookie: AWSALB=X85noKLlDHTIuEmxy0oZTc/nFSlCFaTYkj8yjaSLpkF1panOxGOylm95T0WUv9n8YMq0guLiPkexrQzw6t0LntiAldydk/BHoXkH/loKp/PVJeCkSMAiL6R5yRIT; Expires=Mon, 04 Jan 2021 04:41:10 GMT; Path=/, AWSALBCORS=X85noKLlDHTIuEmxy0oZTc/nFSlCFaTYkj8yjaSLpkF1panOxGOylm95T0WUv9n8YMq0guLiPkexrQzw6t0LntiAldydk/BHoXkH/loKp/PVJeCkSMAiL6R5yRIT; Expires=Mon, 04 Jan 2021 04:41:10 GMT; Path=/; SameSite=None; Secure, climatedata.cookie=2093065738.64288.0000; path=/; Httponly; Secure, TS01c35ec3=010f7a2ab053cb968d05475c5650c457f1ffd4c8baadb46e7ceafc7eae24ec0f27c30b6699d3ec0c0f437c4cda80a963b03a5a6ef64358f993dc74135ceff91b027cc57888; Path=/, climatedataapi.cookie=2615193866.33060.0000; path=/; Httponly, climatedataapi_ext.cookie=2543958026.20480.0000; path=/; Httponly, TS0137860d=01359ee976090ae193f828d533bd58387caafdef1cedddf6fd9fec4a62d5bdcdf4c199ddbf5b4cbd149a1bb821735d770de56c57e10aec44d9cd43d2970de4dbf644dc507a62d63cac43ee050c84e5be6bd19cf7d145e9cec8dc34d89bc86f21fc27f5433dcb23429ed4393e9bf52137bbbf1e92ce4bdd3e5d8b0b151ae38679b3b44fd47dc1d2cf1c8323cca03002858d066a8975; Path=/
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Headers: X-Requested-With
 Access-Control-Allow-Methods: GET
