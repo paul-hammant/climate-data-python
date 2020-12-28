@@ -20,10 +20,10 @@ Connection: keep-alive
 ### Response headers recorded for playback:
 
 ```
-Date: Mon, 28 Dec 2020 04:41:10 GMT
+Date: Mon, 28 Dec 2020 13:54:00 GMT
 Content-Type: application/xml
 Connection: keep-alive
-Set-Cookie: AWSALB=X85noKLlDHTIuEmxy0oZTc/nFSlCFaTYkj8yjaSLpkF1panOxGOylm95T0WUv9n8YMq0guLiPkexrQzw6t0LntiAldydk/BHoXkH/loKp/PVJeCkSMAiL6R5yRIT; Expires=Mon, 04 Jan 2021 04:41:10 GMT; Path=/, AWSALBCORS=X85noKLlDHTIuEmxy0oZTc/nFSlCFaTYkj8yjaSLpkF1panOxGOylm95T0WUv9n8YMq0guLiPkexrQzw6t0LntiAldydk/BHoXkH/loKp/PVJeCkSMAiL6R5yRIT; Expires=Mon, 04 Jan 2021 04:41:10 GMT; Path=/; SameSite=None; Secure, climatedata.cookie=2093065738.64288.0000; path=/; Httponly; Secure, TS01c35ec3=010f7a2ab053cb968d05475c5650c457f1ffd4c8baadb46e7ceafc7eae24ec0f27c30b6699d3ec0c0f437c4cda80a963b03a5a6ef64358f993dc74135ceff91b027cc57888; Path=/, climatedataapi.cookie=2615193866.33060.0000; path=/; Httponly, climatedataapi_ext.cookie=2543958026.20480.0000; path=/; Httponly, TS0137860d=01359ee976090ae193f828d533bd58387caafdef1cedddf6fd9fec4a62d5bdcdf4c199ddbf5b4cbd149a1bb821735d770de56c57e10aec44d9cd43d2970de4dbf644dc507a62d63cac43ee050c84e5be6bd19cf7d145e9cec8dc34d89bc86f21fc27f5433dcb23429ed4393e9bf52137bbbf1e92ce4bdd3e5d8b0b151ae38679b3b44fd47dc1d2cf1c8323cca03002858d066a8975; Path=/
+Set-Cookie: AWSALB=yRyxLe1BEWHkw33ooq+5gVDSQKF+tfX+EyWpplQABlyFXeSUGXH2SGwqyNsAQhh28nE7kC2ZxAS0nCcgSu8ir4lfbLSYNb0JNw2VYGFnuEziEarbX2rqXAwNkAFf; Expires=Mon, 04 Jan 2021 13:54:00 GMT; Path=/, AWSALBCORS=yRyxLe1BEWHkw33ooq+5gVDSQKF+tfX+EyWpplQABlyFXeSUGXH2SGwqyNsAQhh28nE7kC2ZxAS0nCcgSu8ir4lfbLSYNb0JNw2VYGFnuEziEarbX2rqXAwNkAFf; Expires=Mon, 04 Jan 2021 13:54:00 GMT; Path=/; SameSite=None; Secure, TS01c35ec3=010640bd987ac107329bfc980bf16ff13d4f54bb3669ff2f7af826a470439a948fbfcd99e3c183e1a503b5b2462be01c31602fdde6; Path=/, climatedataapi.cookie=2615193866.33060.0000; path=/; Httponly, climatedataapi_ext.cookie=2543958026.20480.0000; path=/; Httponly, TS0137860d=01359ee976bffb3dc05a26c54b4b4ed0cb6cc58341938c33f938a21351a39dfe0c1da8cf751da93ca389d12fafebf8e7b277bfddc683aaae2aefcf43d80cdb646a178f344b86f21a57b9177f9efbca39f1917966ca2163932372eab22d4d045719147de7e4bdb4f75b768a0df7fbea64117a51d7862c67f88415d6714cab5828d6f0d1e96b; Path=/
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Headers: X-Requested-With
 Access-Control-Allow-Methods: GET

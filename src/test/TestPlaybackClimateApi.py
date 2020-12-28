@@ -1,19 +1,14 @@
 import inspect
-import os
-import sys
 import threading
-
-import pytest
 
 import servirtium.playback as MockService
 from servirtium.markdown_parser import get_markdown_file_strings
 
-from definitions import MOCKS_DIR, ROOT_DIR
+from definitions import ROOT_DIR
 from src.test.TestClimateApi import TestClimateApi
 
 
 class TestPlaybackClimateApi(TestClimateApi):
-
     # mock server is man-in-the-middle, overriding real site
     site = "http://localhost:61417"
 
@@ -30,8 +25,8 @@ class TestPlaybackClimateApi(TestClimateApi):
         super().test_averageRainfallForGreatBritainFrom1980to1999Exists()
 
     def test_averageRainfallForFranceFrom1980to1999Exists(self):
-       MockService.MockServiceHttpHandler.set_markdown_filename(inspect.stack()[0][3])
-       super().test_averageRainfallForFranceFrom1980to1999Exists()
+        MockService.MockServiceHttpHandler.set_markdown_filename(inspect.stack()[0][3])
+        super().test_averageRainfallForFranceFrom1980to1999Exists()
 
     def test_averageRainfallForEgyptFrom1980to1999Exists(self):
         MockService.MockServiceHttpHandler.set_markdown_filename(inspect.stack()[0][3])
@@ -48,5 +43,3 @@ class TestPlaybackClimateApi(TestClimateApi):
     def test_averageRainfallForGreatBritainAndFranceFrom1980to1999CanBeCalculatedFromTwoRequests(self):
         MockService.MockServiceHttpHandler.set_markdown_filename(inspect.stack()[0][3])
         super().test_averageRainfallForGreatBritainAndFranceFrom1980to1999CanBeCalculatedFromTwoRequests()
-
-
