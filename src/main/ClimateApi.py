@@ -4,7 +4,7 @@ import xml.etree.ElementTree as ET
 
 class ClimateApi:
 
-    CLIMATE_API_SITE = "http://climatedataapi.worldbank.org"
+    CLIMATE_API_SITE = "http://worldbank-api-for-servirtium.local.gd:4567"
 
     def __init__(self, site):
         self.site = site

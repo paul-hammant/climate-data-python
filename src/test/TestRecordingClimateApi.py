@@ -10,10 +10,10 @@ from src.test.TestClimateApi import TestClimateApi
 
 
 class TestRecordingClimateApi(TestClimateApi):
-    servirtium_site = "http://localhost:61417"
+    servirtium_site = "http://servirtium.local.gd:61417"
 
     MockRecorder.set_mocks_dir(MOCKS_DIR)
-    MockRecorder.set_real_service('http://climatedataapi.worldbank.org')
+    MockRecorder.set_real_service('http://worldbank-api-for-servirtium.local.gd:4567')
     MockRecorder.set_request_header_replacements({'User-Agent': 'Servirtium-Testing'})
     MockRecorder.set_response_header_removals({'Set-Cookie: AWSALB', 'X-', "Date:"})
 

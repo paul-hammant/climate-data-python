@@ -10,7 +10,7 @@ from src.test.TestClimateApi import TestClimateApi
 
 class TestPlaybackClimateApi(TestClimateApi):
     # mock server is man-in-the-middle, overriding real site
-    site = "http://localhost:61417"
+    site = "http://servirtium.local.gd:61417"
 
     # mock_recordings = parser.get_recordings(os.path.dirname(os.path.realpath(__file__)).replace('main', 'mocks'))
 
