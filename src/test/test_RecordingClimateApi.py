@@ -6,7 +6,7 @@ import servirtium.recorder as MockRecorder
 
 from definitions import MOCKS_DIR
 from src.main.ClimateApi import ClimateApi
-from src.test.TestClimateApi import TestClimateApi
+from src.test.test_ClimateApi import TestClimateApi
 
 
 class TestRecordingClimateApi(TestClimateApi):

@@ -5,7 +5,7 @@ import servirtium.playback as MockService
 from servirtium.markdown_parser import get_markdown_file_strings
 
 from definitions import ROOT_DIR
-from src.test.TestClimateApi import TestClimateApi
+from src.test.test_ClimateApi import TestClimateApi
 
 
 class TestPlaybackClimateApi(TestClimateApi):
